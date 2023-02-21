@@ -1,0 +1,25 @@
+typedef struct
+{
+  unsigned int score[2];
+  short int coins[2];
+  short int level;
+  short int lives;
+  short int screenx;
+} stats;
+typedef struct ct
+{
+  short int coinx;
+  short int coiny;
+  short int coinloop;
+  short int dy;
+  struct ct *next;
+}cointype;
+typedef struct st
+{
+  short int scorex;
+  short int scorey;
+  short int scoreloop;
+  char num[5];
+  struct st *next;
+}scoretype;
+//GLOBAL VARIABLES///////////////////////////////////////////////////////////
