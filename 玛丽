@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+#include<mem.h>
+#include<dos.h>
+#include<string.h>
+#include<alloc.h>
+#include<time.h>
+#include<f:\smb\key.c>  //KEYBOARD HANDLER FILE
+    //(f:\smb\ = directory of file key.c)
+#include<f:\smb\xline.h>        //Xlib Header files for Mode X graphics
+#include<f:\smb\xrect.h>  //Functions!
+#include<f:\smb\xpoint.h> //(f:\smb\ = directory of x*.h)
+#include<f:\smb\xvsync.h>
+#include<f:\smb\xpbitmap.h>
+#include<f:\smb\xbmtools.h>
+#define TEXTCOLOR  35
+#define BACKGROUND 32
+typedef struct
+{
+  char red;
+  char green;
+  char blue;
+}colorpal;
+//DEFINE GRAPHICS ARRAYS/////////////////////////////////////////////////////
+typedef struct
+{
+  char mario[7][16][16];
+  char far *block[52];
+  char world[14][217];
+  char far *coin[3];
+  short int bumped[2];
+  short int bumploop;
+  short int sprite;
+  short int direction;
+  short int maxlength;
+  短整数 startpos[2]；
+  彩色调色板[256]；
+  colorpal marioc[2];
+  colorpal luigic[2];
+} graphics;
+//PLAYER INFO STRUCTURE//////////////////////////////////////////////////////
